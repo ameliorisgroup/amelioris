@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AMELIORIS | Boutique Cyber Advisory</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-cream: #FAF7F2;
+      --bg-cream-accent: #F1ECE4;
+      --text-dark: #1A1A1A;
+      --text-muted: #555555;
+      --border-color: #E2DDD5;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 200;
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
+      line-height: 1.7;
+      letter-spacing: 0.05em;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2.5rem 8%;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .brand-logo img {
+      height: 32px; /* Adjust height to match navigation proportion */
+      width: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 3rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-size: 0.95rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      transition: opacity 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      opacity: 0.5;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 75vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 4rem 8%;
+      max-width: 1300px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title {
+      font-size: 3.8rem;
+      font-weight: 200;
+      line-height: 1.25;
+      letter-spacing: 0.06em;
+      margin-bottom: 2.5rem;
+      max-width: 1000px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      width: fit-content;
+      padding: 1.1rem 2.8rem;
+      border: 1px solid var(--text-dark);
+      background: transparent;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-size: 0.9rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background-color: var(--text-dark);
+      color: var(--bg-cream);
+    }
+
+    /* Services Section */
+    .services {
+      padding: 6rem 8%;
+      background-color: var(--bg-cream-accent);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      margin-bottom: 4rem;
+      color: var(--text-muted);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3.5rem;
+    }
+
+    .service-card {
+      border-left: 1px solid var(--border-color);
+      padding-left: 1.5rem;
+    }
+
+    .service-card h3 {
+      font-size: 1.45rem;
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+    }
+
+    .service-card p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      font-weight: 300;
+    }
+
+    /* Contact / Footer */
+    footer {
+      padding: 5rem 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 3rem;
+    }
+
+    .contact-info h2 {
+      font-size: 2rem;
+      font-weight: 200;
+      letter-spacing: 0.1em;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .contact-details a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-size: 1.1rem;
+      width: fit-content;
+      border-bottom: 1px solid var(--text-dark);
+      transition: opacity 0.3s ease;
+    }
+
+    .contact-details a:hover {
+      opacity: 0.6;
+    }
+
+    .copyright {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-title { font-size: 2.5rem; }
+      .brand-logo img { height: 24px; }
+      .nav-links { display: none; }
+      footer { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#" class="brand-logo">
+      <img src="logo.png" alt="AMELIORIS Logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Our Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" id="about">
+    <p class="hero-subtitle">Cyber Advisory led by former regulator</p>
+    <h1 class="hero-title">Elevate your digital resilience through tailored security governance and strategic risk advisory.</h1>
+    <a href="#contact" class="cta-btn">EXPLORE NOW</a>
+  </section>
+
+  <section class="services" id="services">
+    <p class="section-title">Our services</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>01. Virtual CISO</h3>
+        <p>Retainer service to step in as an experienced resource, be it to prepare for regulator meetings or to respond to auditors.</p>
+      </div>
+      <div class="service-card">
+        <h3>02. Board and Tech C-Suite Advisory</h3>
+        <p>Demystifying fiduciary duties, setting cyber risk appetite, and guiding tech leadership on regulatory strategies.</p>
+      </div>
+      <div class="service-card">
+        <h3>03. RMiT Compliance Advisory</h3>
+        <p>Preparing financial institutions for periodic assessment against BNM IT supervisory tools and regulatory frameworks.</p>
+      </div>
+      <div class="service-card">
+        <h3>04. NCII Entity Advisory</h3>
+        <p>Customized governance workshops and audit readiness aligned with NACSA mandates for NCII entities.</p>
+      </div>
+      <div class="service-card">
+        <h3>05. PQC Readiness</h3>
+        <p>AI enabled automated crypto discovery tool to generate a Cryptographic Bill of Materials (CBOM)</p>
+      </div>
+      <div class="service-card">
+        <h3>06. Tactical Risk Advisory</h3>
+        <p>Evaluate cloud migration readiness, RMiT's TRMF/CRF alignment to regulatory expectations, and assess third-party service provider (TPSP) risks.</p>
+      </div>
+      <div class="service-card">
+        <h3>07. Data Privacy Assessment</h3>
+        <p>Robust governance over Personally Identifiable Information (PII) to ensure compliance with Malaysia's PDPA standards.</p>
+      </div>
+      <div class="service-card">
+        <h3>08. Engaging Cyber Simulation</h3>
+        <p>Awareness session infused with role-play using a proprietary AI enabled cyber simulation tool</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      <div class="contact-details">
+        <a href="https://wa.me/60126640878" target="_blank" rel="noopener noreferrer">+60 12-664 0878 (WhatsApp)</a>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 Amelioris Group Sdn Bhd (1694656-W). All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
